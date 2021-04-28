@@ -1,0 +1,1986 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "RISService70",
+    "contact": {}
+  },
+  "host": "localhost:8443",
+  "basePath": "/realtimeservice2/services/RISService70",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/selectCmDevice": {
+      "post": {
+        "summary": "selectCmDevice",
+        "tags": [
+          "RisBinding"
+        ],
+        "operationId": "selectCmDevice",
+        "deprecated": false,
+        "produces": [
+          "application/xml"
+        ],
+        "consumes": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/selectCmDeviceRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved the response",
+            "schema": {
+              "$ref": "#/definitions/selectCmDeviceResponse1"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/selectCtiItem": {
+      "post": {
+        "summary": "selectCtiItem",
+        "tags": [
+          "RisBinding"
+        ],
+        "operationId": "selectCtiItem",
+        "deprecated": false,
+        "produces": [
+          "application/xml"
+        ],
+        "consumes": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/selectCtiItemRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved the response",
+            "schema": {
+              "$ref": "#/definitions/selectCtiItemResponse1"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/selectCmDeviceExt": {
+      "post": {
+        "summary": "selectCmDeviceExt",
+        "tags": [
+          "RisBinding"
+        ],
+        "operationId": "selectCmDeviceExt",
+        "deprecated": false,
+        "produces": [
+          "application/xml"
+        ],
+        "consumes": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/selectCmDeviceExtRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved the response",
+            "schema": {
+              "$ref": "#/definitions/selectCmDeviceResponse1"
+            },
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "selectCmDevice": {
+      "title": "selectCmDevice",
+      "description": "",
+      "xml": {
+        "name": "selectCmDevice",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "StateInfo": {
+          "xml": {
+            "name": "StateInfo",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "CmSelectionCriteria": {
+          "$ref": "#/definitions/CmSelectionCriteria"
+        }
+      },
+      "required": [
+        "StateInfo",
+        "CmSelectionCriteria"
+      ]
+    },
+    "selectCmDeviceExt": {
+      "title": "selectCmDeviceExt",
+      "description": "",
+      "xml": {
+        "name": "selectCmDeviceExt",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "StateInfo": {
+          "xml": {
+            "name": "StateInfo",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "CmSelectionCriteria": {
+          "$ref": "#/definitions/CmSelectionCriteria"
+        }
+      },
+      "required": [
+        "StateInfo",
+        "CmSelectionCriteria"
+      ]
+    },
+    "SelectItem": {
+      "title": "SelectItem",
+      "description": "",
+      "xml": {
+        "name": "SelectItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "Item": {
+          "xml": {
+            "name": "Item",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "Item"
+      ]
+    },
+    "ArrayOfSelectItem": {
+      "title": "ArrayOfSelectItem",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfSelectItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SelectItem"
+          }
+        }
+      }
+    },
+    "CmSelectionCriteria": {
+      "title": "CmSelectionCriteria",
+      "description": "",
+      "xml": {
+        "name": "CmSelectionCriteria",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "MaxReturnedDevices": {
+          "xml": {
+            "name": "MaxReturnedDevices",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "DeviceClass": {
+          "xml": {
+            "name": "DeviceClass",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "Model": {
+          "xml": {
+            "name": "Model",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "Status": {
+          "xml": {
+            "name": "Status",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "NodeName": {
+          "xml": {
+            "name": "NodeName",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "SelectBy": {
+          "$ref": "#/definitions/CmSelectBy"
+        },
+        "SelectItems": {
+          "$ref": "#/definitions/ArrayOfSelectItem"
+        },
+        "Protocol": {
+          "$ref": "#/definitions/ProtocolType"
+        },
+        "DownloadStatus": {
+          "$ref": "#/definitions/DeviceDownloadStatus"
+        }
+      },
+      "required": [
+        "MaxReturnedDevices",
+        "DeviceClass",
+        "Model",
+        "Status",
+        "NodeName",
+        "SelectBy",
+        "SelectItems",
+        "Protocol",
+        "DownloadStatus"
+      ]
+    },
+    "selectCmDeviceResponse": {
+      "title": "selectCmDeviceResponse",
+      "description": "",
+      "xml": {
+        "name": "selectCmDeviceResponse",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "selectCmDeviceReturn": {
+          "$ref": "#/definitions/selectCmDeviceReturn"
+        }
+      },
+      "required": [
+        "selectCmDeviceReturn"
+      ]
+    },
+    "selectCmDeviceReturn": {
+      "title": "selectCmDeviceReturn",
+      "description": "",
+      "xml": {
+        "name": "selectCmDeviceReturn",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "SelectCmDeviceResult": {
+          "$ref": "#/definitions/SelectCmDeviceResult"
+        },
+        "StateInfo": {
+          "xml": {
+            "name": "StateInfo",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "SelectCmDeviceResult",
+        "StateInfo"
+      ]
+    },
+    "CmDevSingleLineStatus": {
+      "title": "CmDevSingleLineStatus",
+      "description": "",
+      "xml": {
+        "name": "CmDevSingleLineStatus",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "DirectoryNumber": {
+          "xml": {
+            "name": "DirectoryNumber",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/CmSingleLineStatus"
+        }
+      },
+      "required": [
+        "DirectoryNumber",
+        "Status"
+      ]
+    },
+    "ArrayOfCmDevSingleLineStatus": {
+      "title": "ArrayOfCmDevSingleLineStatus",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfCmDevSingleLineStatus",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CmDevSingleLineStatus"
+          }
+        }
+      }
+    },
+    "IPAddressArrayType": {
+      "title": "IPAddressArrayType",
+      "description": "",
+      "xml": {
+        "name": "IPAddressArrayType",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "IP": {
+          "xml": {
+            "name": "IP",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "IPAddrType": {
+          "$ref": "#/definitions/IPAddrType"
+        },
+        "Attribute": {
+          "$ref": "#/definitions/AttributeType"
+        }
+      },
+      "required": [
+        "IP",
+        "IPAddrType",
+        "Attribute"
+      ]
+    },
+    "ArrayOfIPAddressArrayType": {
+      "title": "ArrayOfIPAddressArrayType",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfIPAddressArrayType",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IPAddressArrayType"
+          }
+        }
+      }
+    },
+    "CmDevice": {
+      "title": "CmDevice",
+      "description": "",
+      "xml": {
+        "name": "CmDevice",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "Name": {
+          "xml": {
+            "name": "Name",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "DirNumber": {
+          "xml": {
+            "name": "DirNumber",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "DeviceClass": {
+          "$ref": "#/definitions/DeviceClass"
+        },
+        "Model": {
+          "xml": {
+            "name": "Model",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "Product": {
+          "xml": {
+            "name": "Product",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "BoxProduct": {
+          "xml": {
+            "name": "BoxProduct",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "Httpd": {
+          "$ref": "#/definitions/CmDevHttpd"
+        },
+        "RegistrationAttempts": {
+          "xml": {
+            "name": "RegistrationAttempts",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "IsCtiControllable": {
+          "xml": {
+            "name": "IsCtiControllable",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "boolean"
+        },
+        "LoginUserId": {
+          "xml": {
+            "name": "LoginUserId",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/CmDevRegStat"
+        },
+        "StatusReason": {
+          "xml": {
+            "name": "StatusReason",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "PerfMonObject": {
+          "xml": {
+            "name": "PerfMonObject",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "DChannel": {
+          "xml": {
+            "name": "DChannel",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "Description": {
+          "xml": {
+            "name": "Description",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "H323Trunk": {
+          "$ref": "#/definitions/H323Trunk"
+        },
+        "TimeStamp": {
+          "xml": {
+            "name": "TimeStamp",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "Protocol": {
+          "$ref": "#/definitions/ProtocolType"
+        },
+        "NumOfLines": {
+          "xml": {
+            "name": "NumOfLines",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "LinesStatus": {
+          "$ref": "#/definitions/ArrayOfCmDevSingleLineStatus"
+        },
+        "ActiveLoadID": {
+          "xml": {
+            "name": "ActiveLoadID",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "InactiveLoadID": {
+          "xml": {
+            "name": "InactiveLoadID",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "DownloadStatus": {
+          "$ref": "#/definitions/DeviceDownloadStatus"
+        },
+        "DownloadFailureReason": {
+          "xml": {
+            "name": "DownloadFailureReason",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "DownloadServer": {
+          "xml": {
+            "name": "DownloadServer",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "IPAddress": {
+          "$ref": "#/definitions/ArrayOfIPAddressArrayType"
+        }
+      },
+      "required": [
+        "Name",
+        "DirNumber",
+        "DeviceClass",
+        "Model",
+        "Product",
+        "BoxProduct",
+        "Httpd",
+        "RegistrationAttempts",
+        "IsCtiControllable",
+        "LoginUserId",
+        "Status",
+        "StatusReason",
+        "PerfMonObject",
+        "DChannel",
+        "Description",
+        "H323Trunk",
+        "TimeStamp",
+        "Protocol",
+        "NumOfLines",
+        "LinesStatus",
+        "ActiveLoadID",
+        "InactiveLoadID",
+        "DownloadStatus",
+        "DownloadFailureReason",
+        "DownloadServer",
+        "IPAddress"
+      ]
+    },
+    "ArrayOfCmDevice": {
+      "title": "ArrayOfCmDevice",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfCmDevice",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CmDevice"
+          }
+        }
+      }
+    },
+    "CmNode": {
+      "title": "CmNode",
+      "description": "",
+      "xml": {
+        "name": "CmNode",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "ReturnCode": {
+          "$ref": "#/definitions/RisReturnCode"
+        },
+        "Name": {
+          "xml": {
+            "name": "Name",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "NoChange": {
+          "xml": {
+            "name": "NoChange",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "boolean"
+        },
+        "CmDevices": {
+          "$ref": "#/definitions/ArrayOfCmDevice"
+        }
+      },
+      "required": [
+        "ReturnCode",
+        "Name",
+        "NoChange",
+        "CmDevices"
+      ]
+    },
+    "ArrayOfCmNode": {
+      "title": "ArrayOfCmNode",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfCmNode",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CmNode"
+          }
+        }
+      }
+    },
+    "SelectCmDeviceResult": {
+      "title": "SelectCmDeviceResult",
+      "description": "",
+      "xml": {
+        "name": "SelectCmDeviceResult",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "TotalDevicesFound": {
+          "xml": {
+            "name": "TotalDevicesFound",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "CmNodes": {
+          "$ref": "#/definitions/ArrayOfCmNode"
+        }
+      },
+      "required": [
+        "TotalDevicesFound",
+        "CmNodes"
+      ]
+    },
+    "selectCtiItem": {
+      "title": "selectCtiItem",
+      "description": "",
+      "xml": {
+        "name": "selectCtiItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "StateInfo": {
+          "xml": {
+            "name": "StateInfo",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "CtiSelectionCriteria": {
+          "$ref": "#/definitions/CtiSelectionCriteria"
+        }
+      },
+      "required": [
+        "StateInfo",
+        "CtiSelectionCriteria"
+      ]
+    },
+    "SelectAppItem": {
+      "title": "SelectAppItem",
+      "description": "",
+      "xml": {
+        "name": "SelectAppItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "AppItem": {
+          "xml": {
+            "name": "AppItem",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "AppItem"
+      ]
+    },
+    "ArrayOfSelectAppItem": {
+      "title": "ArrayOfSelectAppItem",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfSelectAppItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SelectAppItem"
+          }
+        }
+      }
+    },
+    "SelectDevName": {
+      "title": "SelectDevName",
+      "description": "",
+      "xml": {
+        "name": "SelectDevName",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "DevName": {
+          "xml": {
+            "name": "DevName",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "DevName"
+      ]
+    },
+    "ArrayOfSelectDevName": {
+      "title": "ArrayOfSelectDevName",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfSelectDevName",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SelectDevName"
+          }
+        }
+      }
+    },
+    "SelectDirNumber": {
+      "title": "SelectDirNumber",
+      "description": "",
+      "xml": {
+        "name": "SelectDirNumber",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "DirNumber": {
+          "xml": {
+            "name": "DirNumber",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "DirNumber"
+      ]
+    },
+    "ArrayOfSelectDirNumber": {
+      "title": "ArrayOfSelectDirNumber",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfSelectDirNumber",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SelectDirNumber"
+          }
+        }
+      }
+    },
+    "CtiSelectionCriteria": {
+      "title": "CtiSelectionCriteria",
+      "description": "",
+      "xml": {
+        "name": "CtiSelectionCriteria",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "MaxReturnedItems": {
+          "xml": {
+            "name": "MaxReturnedItems",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "CtiMgrClass": {
+          "$ref": "#/definitions/CtiMgrClass"
+        },
+        "Status": {
+          "$ref": "#/definitions/CtiStatus"
+        },
+        "NodeName": {
+          "xml": {
+            "name": "NodeName",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "SelectAppBy": {
+          "$ref": "#/definitions/CtiSelectAppBy"
+        },
+        "AppItems": {
+          "$ref": "#/definitions/ArrayOfSelectAppItem"
+        },
+        "DevNames": {
+          "$ref": "#/definitions/ArrayOfSelectDevName"
+        },
+        "DirNumbers": {
+          "$ref": "#/definitions/ArrayOfSelectDirNumber"
+        }
+      },
+      "required": [
+        "MaxReturnedItems",
+        "CtiMgrClass",
+        "Status",
+        "NodeName",
+        "SelectAppBy",
+        "AppItems",
+        "DevNames",
+        "DirNumbers"
+      ]
+    },
+    "selectCtiItemResponse": {
+      "title": "selectCtiItemResponse",
+      "description": "",
+      "xml": {
+        "name": "selectCtiItemResponse",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "selectCtiItemReturn": {
+          "$ref": "#/definitions/selectCtiItemReturn"
+        }
+      },
+      "required": [
+        "selectCtiItemReturn"
+      ]
+    },
+    "selectCtiItemReturn": {
+      "title": "selectCtiItemReturn",
+      "description": "",
+      "xml": {
+        "name": "selectCtiItemReturn",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "SelectCtiItemResult": {
+          "$ref": "#/definitions/SelectCtiItemResult"
+        },
+        "StateInfo": {
+          "xml": {
+            "name": "StateInfo",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "SelectCtiItemResult",
+        "StateInfo"
+      ]
+    },
+    "CtiItem": {
+      "title": "CtiItem",
+      "description": "",
+      "xml": {
+        "name": "CtiItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "AppId": {
+          "xml": {
+            "name": "AppId",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "UserId": {
+          "xml": {
+            "name": "UserId",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "AppIpAddr": {
+          "xml": {
+            "name": "AppIpAddr",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "AppIpv6Addr": {
+          "xml": {
+            "name": "AppIpv6Addr",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "AppStatus": {
+          "$ref": "#/definitions/CtiStatus"
+        },
+        "AppStatusReason": {
+          "xml": {
+            "name": "AppStatusReason",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "AppTimeStamp": {
+          "xml": {
+            "name": "AppTimeStamp",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "CtiDevice": {
+          "$ref": "#/definitions/CtiDevice"
+        },
+        "CtiLine": {
+          "$ref": "#/definitions/CtiLine"
+        }
+      },
+      "required": [
+        "AppId",
+        "UserId",
+        "AppIpAddr",
+        "AppIpv6Addr",
+        "AppStatus",
+        "AppStatusReason",
+        "AppTimeStamp",
+        "CtiDevice",
+        "CtiLine"
+      ]
+    },
+    "ArrayOfCtiItem": {
+      "title": "ArrayOfCtiItem",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfCtiItem",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CtiItem"
+          }
+        }
+      }
+    },
+    "CtiNode": {
+      "title": "CtiNode",
+      "description": "",
+      "xml": {
+        "name": "CtiNode",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "ReturnCode": {
+          "$ref": "#/definitions/RisReturnCode"
+        },
+        "Name": {
+          "xml": {
+            "name": "Name",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "NoChange": {
+          "xml": {
+            "name": "NoChange",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "boolean"
+        },
+        "CtiItems": {
+          "$ref": "#/definitions/ArrayOfCtiItem"
+        }
+      },
+      "required": [
+        "ReturnCode",
+        "Name",
+        "NoChange",
+        "CtiItems"
+      ]
+    },
+    "ArrayOfCtiNode": {
+      "title": "ArrayOfCtiNode",
+      "description": "",
+      "xml": {
+        "name": "ArrayOfCtiNode",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "item": {
+          "xml": {
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CtiNode"
+          }
+        }
+      }
+    },
+    "SelectCtiItemResult": {
+      "title": "SelectCtiItemResult",
+      "description": "",
+      "xml": {
+        "name": "SelectCtiItemResult",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "TotalItemsFound": {
+          "xml": {
+            "name": "TotalItemsFound",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "CtiNodes": {
+          "$ref": "#/definitions/ArrayOfCtiNode"
+        }
+      },
+      "required": [
+        "TotalItemsFound",
+        "CtiNodes"
+      ]
+    },
+    "CmSelectBy": {
+      "title": "CmSelectBy",
+      "description": "",
+      "xml": {
+        "name": "CmSelectBy",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Name",
+        "IPV4Address",
+        "IPV6Address",
+        "DirNumber",
+        "Description"
+      ]
+    },
+    "ProtocolType": {
+      "title": "ProtocolType",
+      "description": "",
+      "xml": {
+        "name": "ProtocolType",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Any",
+        "SCCP",
+        "SIP",
+        "Unknown"
+      ]
+    },
+    "DeviceDownloadStatus": {
+      "title": "DeviceDownloadStatus",
+      "description": "",
+      "xml": {
+        "name": "DeviceDownloadStatus",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Any",
+        "Upgrading",
+        "Successful",
+        "Failed",
+        "Unknown"
+      ]
+    },
+    "RisReturnCode": {
+      "title": "RisReturnCode",
+      "description": "",
+      "xml": {
+        "name": "RisReturnCode",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Ok",
+        "NotFound",
+        "InvalidRequest",
+        "InternalError",
+        "NodeNotResponding",
+        "InvalidNodeName"
+      ]
+    },
+    "DeviceClass": {
+      "title": "DeviceClass",
+      "description": "",
+      "xml": {
+        "name": "DeviceClass",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Any",
+        "Phone",
+        "Gateway",
+        "H323",
+        "Cti",
+        "VoiceMail",
+        "MediaResources",
+        "SIPTrunk",
+        "HuntList",
+        "Unknown"
+      ]
+    },
+    "CmDevHttpd": {
+      "title": "CmDevHttpd",
+      "description": "",
+      "xml": {
+        "name": "CmDevHttpd",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Yes",
+        "No",
+        "Unknown"
+      ]
+    },
+    "CmDevRegStat": {
+      "title": "CmDevRegStat",
+      "description": "",
+      "xml": {
+        "name": "CmDevRegStat",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Any",
+        "Registered",
+        "UnRegistered",
+        "Rejected",
+        "PartiallyRegistered",
+        "Unknown"
+      ]
+    },
+    "H323Trunk": {
+      "title": "H323Trunk",
+      "description": "",
+      "xml": {
+        "name": "H323Trunk",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "ConfigName": {
+          "xml": {
+            "name": "ConfigName",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "TechPrefix": {
+          "xml": {
+            "name": "TechPrefix",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "Zone": {
+          "xml": {
+            "name": "Zone",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "RemoteCmServer1": {
+          "xml": {
+            "name": "RemoteCmServer1",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "RemoteCmServer2": {
+          "xml": {
+            "name": "RemoteCmServer2",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "RemoteCmServer3": {
+          "xml": {
+            "name": "RemoteCmServer3",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "AltGkList": {
+          "xml": {
+            "name": "AltGkList",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "ActiveGk": {
+          "xml": {
+            "name": "ActiveGk",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "CallSignalAddr": {
+          "xml": {
+            "name": "CallSignalAddr",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "RasAddr": {
+          "xml": {
+            "name": "RasAddr",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        }
+      },
+      "required": [
+        "ConfigName",
+        "TechPrefix",
+        "Zone",
+        "RemoteCmServer1",
+        "RemoteCmServer2",
+        "RemoteCmServer3",
+        "AltGkList",
+        "ActiveGk",
+        "CallSignalAddr",
+        "RasAddr"
+      ]
+    },
+    "CmSingleLineStatus": {
+      "title": "CmSingleLineStatus",
+      "description": "",
+      "xml": {
+        "name": "CmSingleLineStatus",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Any",
+        "Registered",
+        "UnRegistered",
+        "Rejected",
+        "Unknown"
+      ]
+    },
+    "IPAddrType": {
+      "title": "IPAddrType",
+      "description": "",
+      "xml": {
+        "name": "IPAddrType",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "ipv4",
+        "ipv6"
+      ]
+    },
+    "AttributeType": {
+      "title": "AttributeType",
+      "description": "",
+      "xml": {
+        "name": "AttributeType",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Unknown",
+        "Adminstrative",
+        "Signaling",
+        "AdministrativeAndSignaling"
+      ]
+    },
+    "CtiMgrClass": {
+      "title": "CtiMgrClass",
+      "description": "",
+      "xml": {
+        "name": "CtiMgrClass",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Provider",
+        "Device",
+        "Line"
+      ]
+    },
+    "CtiStatus": {
+      "title": "CtiStatus",
+      "description": "",
+      "xml": {
+        "name": "CtiStatus",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "Any",
+        "Open",
+        "Closed",
+        "OpenFailed",
+        "Unknown"
+      ]
+    },
+    "CtiSelectAppBy": {
+      "title": "CtiSelectAppBy",
+      "description": "",
+      "xml": {
+        "name": "CtiSelectAppBy",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "string",
+      "enum": [
+        "AppId",
+        "AppIPV4Address",
+        "AppIPV6Address",
+        "UserId"
+      ]
+    },
+    "CtiDevice": {
+      "title": "CtiDevice",
+      "description": "",
+      "xml": {
+        "name": "CtiDevice",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "AppControlsMedia": {
+          "xml": {
+            "name": "AppControlsMedia",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "boolean"
+        },
+        "DeviceName": {
+          "xml": {
+            "name": "DeviceName",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "DeviceStatus": {
+          "$ref": "#/definitions/CtiStatus"
+        },
+        "DeviceStatusReason": {
+          "xml": {
+            "name": "DeviceStatusReason",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "DeviceTimeStamp": {
+          "xml": {
+            "name": "DeviceTimeStamp",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "AppControlsMedia",
+        "DeviceName",
+        "DeviceStatus",
+        "DeviceStatusReason",
+        "DeviceTimeStamp"
+      ]
+    },
+    "CtiLine": {
+      "title": "CtiLine",
+      "description": "",
+      "xml": {
+        "name": "CtiLine",
+        "namespace": "http://schemas.cisco.com/ast/soap",
+        "prefix": "tns",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "DirNumber": {
+          "xml": {
+            "name": "DirNumber",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "string"
+        },
+        "LineStatus": {
+          "$ref": "#/definitions/CtiStatus"
+        },
+        "LineStatusReason": {
+          "xml": {
+            "name": "LineStatusReason",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        },
+        "LineTimeStamp": {
+          "xml": {
+            "name": "LineTimeStamp",
+            "namespace": "http://schemas.cisco.com/ast/soap",
+            "prefix": "tns",
+            "attribute": false,
+            "wrapped": false
+          },
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "DirNumber",
+        "LineStatus",
+        "LineStatusReason",
+        "LineTimeStamp"
+      ]
+    },
+    "selectCmDeviceExtRequest": {
+      "title": "selectCmDeviceExtRequest",
+      "type": "object",
+      "properties": {
+        "selectCmDeviceExt": {
+          "$ref": "#/definitions/selectCmDeviceExt"
+        }
+      },
+      "required": [
+        "selectCmDeviceExt"
+      ]
+    },
+    "selectCmDeviceRequest": {
+      "title": "selectCmDeviceRequest",
+      "type": "object",
+      "properties": {
+        "selectCmDevice": {
+          "$ref": "#/definitions/selectCmDevice"
+        }
+      },
+      "required": [
+        "selectCmDevice"
+      ]
+    },
+    "selectCmDeviceResponse1": {
+      "title": "selectCmDeviceResponse1",
+      "xml": {
+        "name": "selectCmDeviceResponse",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "selectCmDeviceResponse": {
+          "$ref": "#/definitions/selectCmDeviceResponse"
+        }
+      },
+      "required": [
+        "selectCmDeviceResponse"
+      ]
+    },
+    "selectCtiItemRequest": {
+      "title": "selectCtiItemRequest",
+      "type": "object",
+      "properties": {
+        "selectCtiItem": {
+          "$ref": "#/definitions/selectCtiItem"
+        }
+      },
+      "required": [
+        "selectCtiItem"
+      ]
+    },
+    "selectCtiItemResponse1": {
+      "title": "selectCtiItemResponse1",
+      "xml": {
+        "name": "selectCtiItemResponse",
+        "attribute": false,
+        "wrapped": false
+      },
+      "type": "object",
+      "properties": {
+        "selectCtiItemResponse": {
+          "$ref": "#/definitions/selectCtiItemResponse"
+        }
+      },
+      "required": [
+        "selectCtiItemResponse"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "RisBinding",
+      "description": ""
+    }
+  ]
+}
